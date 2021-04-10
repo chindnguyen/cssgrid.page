@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+node_modules/
+package-lock.json
+yarn.lock
+index.html
+css/cssgrid.min.css.map
+css/cssgrid.css.map
