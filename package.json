@@ -1,8 +1,9 @@
 {
-  "name": "cssgrid",
-  "version": "1.0.0",
+  "name": "cssgrid.page",
+  "version": "0.0.1",
   "description": "A lightweight &amp; responsive grid based on the CSS Grid property",
-  "main": "scss/main.scss",
+  "main": "css/cssgrid.min.css",
+  "sass": "scss/cssgrid.scss",
   "dependencies": {
     "browserslist": "^4.16.3"
   },
@@ -23,7 +24,7 @@
     "url": "git+https://github.com/chindnguyen/cssgrid.git"
   },
   "author": "chind",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/chindnguyen/cssgrid/issues"
   },
