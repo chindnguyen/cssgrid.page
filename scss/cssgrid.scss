@@ -1,0 +1,134 @@
+@import "settings";
+
+.c-grid {
+  display: grid;
+  gap: $default-gap;
+}
+
+// Grid template columns
+@for $i from 1 through $grid-columns {
+  .c-grid-#{$i}-cols {
+    grid-template-columns: repeat($i, minmax(0,1fr));
+  }
+}
+
+// Grid template rows
+@for $i from 1 through $grid-columns {
+  .c-grid-#{$i}-rows {
+    grid-template-rows: repeat($i, minmax(0,1fr));
+  }
+}
+
+// Grid gap
+@for $i from 0 through $max-gap {
+  @if ($i % 2 == 0) {
+    .gap-#{$i} {
+      gap: 1px * $i;
+    }
+
+    .gap-x-#{$i} {
+      column-gap: 1px * $i;
+    }
+
+    .gap-y-#{$i} {
+      row-gap: 1px * $i;
+    }
+  }
+}
+
+// Display
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+
+// Text alignment
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+}
+
+// Settings for breakpoints
+@each $name, $br in $grid-breakpoints {
+
+  @media (min-width: $br) {
+    // Grid template columns
+    @for $i from 1 through $grid-columns {
+      .#{$name}\:c-grid-#{$i}-cols {
+        grid-template-columns: repeat($i, minmax(0,1fr));
+      }
+    }
+
+    // Grid template rows
+    @for $i from 1 through $grid-columns {
+      .#{$name}\:c-grid-#{$i}-rows {
+        grid-template-rows: repeat($i, minmax(0,1fr));
+      }
+    }
+
+    // Grid gap
+    @for $i from 0 through $max-gap {
+      @if ($i % 2 == 0) {
+        .#{$name}\:gap-#{$i} {
+          gap: 1px * $i;
+        }
+
+        .#{$name}\:gap-x-#{$i} {
+          column-gap: 1px * $i;
+        }
+
+        .#{$name}\:gap-y-#{$i} {
+          row-gap: 1px * $i;
+        }
+      }
+    }
+
+    // Display
+    .#{$name}\:hidden {
+      display: none;
+    }
+    .#{$name}\:block {
+      display: block;
+    }
+    .#{$name}\:inline-block {
+      display: inline-block;
+    }
+    .#{$name}\:flex {
+      display: flex;
+    }
+    .#{$name}\:inline-flex {
+      display: inline-flex;
+    }
+
+    // Text alignment
+    .#{$name}\:text {
+      &-left {
+        text-align: left;
+      }
+      &-center {
+        text-align: center;
+      }
+      &-right {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -6,3 +6,4 @@ yarn.lock
 index.html
 css/cssgrid.min.css.map
 css/cssgrid.css.map
+.DS_Store

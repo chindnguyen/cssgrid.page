@@ -1,0 +1,12 @@
+$grid-columns: 12;
+$max-gap: 50;
+$default-gap: var(--grid-gap, 0);
+
+// Breakpoints
+$grid-breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);

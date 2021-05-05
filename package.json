@@ -15,8 +15,8 @@
   "scripts": {
     "build": "npm run build-scss && npm run build-autoprefix",
     "build-autoprefix": "postcss css/cssgrid.min.css --map false --use autoprefixer --output=css/cssgrid.min.css",
-    "build-scss": "node-sass --include-path scss scss/main.scss css/cssgrid.min.css --output-style compressed",
-    "start": "node-sass --include-path scss scss/main.scss css/cssgrid.css --source-map true --source-map-embed true --watch "
+    "build-scss": "node-sass --include-path scss scss/cssgrid.scss css/cssgrid.min.css --output-style compressed",
+    "start": "node-sass --include-path scss scss/cssgrid.scss css/cssgrid.css --source-map true --source-map-embed true --watch "
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "url": "https://github.com/chindnguyen/cssgrid/issues"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 4 versions"
   ],
   "homepage": "https://cssgrid.page"
 }
