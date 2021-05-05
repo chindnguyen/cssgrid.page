@@ -1,6 +1,6 @@
 {
   "name": "cssgrid.page",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight &amp; responsive grid based on the CSS Grid property",
   "main": "css/cssgrid.min.css",
   "sass": "scss/cssgrid.scss",
